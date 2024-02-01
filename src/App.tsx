@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {TsBasics} from './quiz-ts-1'
+import { TsUserProfile } from './quiz-ts-1';
+import { TsCounter } from './quiz-ts-1';
+import { TsButton } from './quiz-ts-1';
+import { TsMessage } from './quiz-ts-1';
+import { ThemeConsumer, ThemeProvider } from './quiz-ts-1/themeProvider';
+import { TsList } from './quiz-ts-1';
+import { TsReadonly } from './quiz-ts-1';
+import { TsInput } from './quiz-ts-1';
+import { TsTuple } from './quiz-ts-1';
 
 function App() {
+  const stringArray = ['Item 1', 'Item 2', 'Item 3'];
+  
+  const readonlyStrings: ReadonlyArray<string> = ['Apple', 'Banana', 'Cherry'];
+
   return (
+
+    <ThemeProvider theme="light">
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TsBasics basics={["juana", "Oskar", "Andrea", "Andres"]}/>
+      <TsUserProfile 
+      name="Andrea Carmona" 
+      age={30} 
+      hobbies={['Leer', 'Tejer', 'Programar']}
+    />
+    <TsCounter/>
+    <TsButton/>
+    <TsMessage message="Hello, Arquitecto" />
+    <ThemeConsumer/> 
     </div>
+    <TsList items={stringArray} renderItem={(item) => <span>{item}</span>} />
+    <TsReadonly items={readonlyStrings} />
+    <TsInput value="Hello" />
+    <TsInput value={123} />
+    <TsInput value={{ name: "Andrea", age: 30 }} />
+    <TsTuple/>
+    </ThemeProvider>
+
   );
 }
 

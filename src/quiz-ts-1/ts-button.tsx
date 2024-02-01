@@ -6,12 +6,12 @@ interface CounterState {
 
 
 function EventHandlingComponent() {
-  // Estado inicializado con una interface
+  
   const [state, setState] = React.useState<CounterState>({ count: 0 });
 
-  // Manejador de eventos tipado con TypeScript
+  
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    // Actualizar el estado para incrementar el contador
+    
     setState(prevState => ({ count: prevState.count + 1 }));
   };
 

@@ -7,7 +7,7 @@ function Counter() {
     setCount(count + 1);
   }
 
-  // Modificar esta función para prevenir que count sea menor que 0
+  
   function decrement() {
     if (count > 0) {
       setCount(count - 1);

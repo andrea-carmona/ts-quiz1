@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 function Counter() {
   const [count, setCount] = React.useState<number>(0);
@@ -17,9 +18,9 @@ function Counter() {
   return (
     <div>
       <h2>Contador: {count}</h2>
-      <button onClick={increment}>Incrementar</button>
+      <Button variant='contained' color='primary' onClick={increment}>Incrementar</Button>
       {/* Deshabilitar el botón si count es 0 */}
-      <button onClick={decrement} disabled={count === 0}>Decrementar</button>
+      <Button variant='contained' color='secondary' onClick={decrement} disabled={count === 0}>Decrementar</Button>
     </div>
   );
 }

@@ -20,26 +20,26 @@ function App() {
   return (
 
     <ThemeProvider theme="light">
-      <AppBar/>
+        <AppBar/>
 
-    <div className="App">
-      <TsBasics basics={["juana", "Oskar", "Andrea", "Andres"]}/>
-      <TsUserProfile 
-      name="Andrea Carmona" 
-      age={30} 
-      hobbies={['Leer', 'Tejer', 'Programar']}
-    />
-    <TsCounter/>
-    <TsButton/>
-    <TsMessage message="Hello, Arquitecto" />
-    <ThemeConsumer/> 
-    </div>
-    <TsList items={stringArray} renderItem={(item) => <span>{item}</span>} />
-    <TsReadonly items={readonlyStrings} />
-    <TsInput value="Hello" />
-    <TsInput value={123} />
-    <TsInput value={{ name: "Andrea", age: 30 }} />
-    <TsTuple/>
+      <div className="App">
+        <TsBasics basics={["juana", "Oskar", "Andrea", "Andres"]}/>
+        <TsUserProfile 
+        name="Andrea Carmona" 
+        age={30} 
+        hobbies={['Leer', 'Tejer', 'Programar']}
+      />
+      <TsCounter/>
+      <TsButton/>
+      <TsMessage message="Hello, Arquitecto" />
+      <ThemeConsumer/> 
+      </div>
+      <TsList items={stringArray} renderItem={(item) => <span>{item}</span>} />
+      <TsReadonly items={readonlyStrings} />
+      <TsInput value="Hello" />
+      <TsInput value={123} />
+      <TsInput value={{ name: "Andrea", age: 30 }} />
+      <TsTuple/>
     </ThemeProvider>
 
   );

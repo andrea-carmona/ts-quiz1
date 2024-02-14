@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import {error} from 'console';
+
 export const theme = createTheme ({
     palette: {
         primary: {
@@ -9,7 +9,7 @@ export const theme = createTheme ({
             main: "#FFAB00",
         },
         error: {
-            main: "#D32F2F",
+            main: "#d32f2f",
         },
     },
     components: {
